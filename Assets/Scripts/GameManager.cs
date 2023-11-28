@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float force;
 
     [SerializeField] private GameObject camera;
+    [SerializeField] private TMP_Text scoreText; // TMP_Text ตัวแปร text 
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,9 @@ public class GameManager : MonoBehaviour
 
         camera = Camera.main.gameObject;
         CameraBehindBall();
-
+        
+        UpdateScoreText();
+        
         //set balls on the table
         SetBalls(BallColors.Red,0);
         SetBalls(BallColors.Yellow,1);
@@ -37,6 +41,10 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void UpdateScoreText()
+    {
+        scoreText.text = $"Player Score : {PlayerScore} "; //scoreText.text คือ เอาแค่ Text มาไม่ได้เอาข้อมูล Size สี หรือทุกกอย่างมันมา
+    }
     // Update is called once per frame
     void Update()
     {
