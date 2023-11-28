@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField ]private int playerScore;
+    public int PlayerScore { get; set; }
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private GameObject[] ballPositions;
 
