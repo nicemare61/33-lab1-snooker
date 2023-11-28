@@ -1180,6 +1180,7 @@ MonoBehaviour:
   cueBall: {fileID: 833926956}
   ballLine: {fileID: 2135706715}
   xInput: 0
+  force: 50
 --- !u!4 &1649525341
 Transform:
   m_ObjectHideFlags: 0
